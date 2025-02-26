@@ -1,0 +1,155 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 500px;
+}
+
+/* Kue coklat */
+.cake {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background-color: #8B4513; /* Warna coklat */
+    border-radius: 10px 10px 0 0;
+    animation: fall 1s ease-in-out forwards;
+}
+
+#cake1 {
+    top: -100px;
+    left: 50px;
+    animation-delay: 0s;
+}
+
+#cake2 {
+    top: -100px;
+    left: 50px;
+    animation-delay: 1s;
+}
+
+#cake3 {
+    top: -100px;
+    left: 50px;
+    animation-delay: 2s;
+}
+
+/* Lapisan coklat pink */
+.chocolate {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background-color: #FF69B4; /* Warna pink */
+    border-radius: 10px 10px 0 0;
+    animation: fall 1s ease-in-out forwards;
+    animation-delay: 3s;
+    top: -100px;
+    left: 50px;
+}
+
+/* Lapisan vanila */
+.vanilla {
+    position: absolute;
+    width: 200px;
+    height: 25px;
+    background-color: #F3E5AB; /* Warna vanila */
+    border-radius: 10px 10px 0 0;
+    animation: fall 1s ease-in-out forwards;
+    animation-delay: 4s;
+    top: -25px;
+    left: 50px;
+}
+
+/* Stroberi */
+.strawberry {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #FF4500; /* Warna stroberi */
+    border-radius: 50%;
+    animation: fall 1s ease-in-out forwards;
+    animation-delay: 5s;
+    top: -20px;
+}
+
+#strawberry1 {
+    left: 60px;
+}
+
+#strawberry2 {
+    left: 130px;
+}
+
+#strawberry3 {
+    left: 200px;
+}
+
+/* Lilin */
+.candle {
+    position: absolute;
+    width: 10px;
+    height: 50px;
+    background-color: #FFFFFF; /* Warna lilin */
+    animation: fall 1s ease-in-out forwards;
+    animation-delay: 6s;
+    top: -50px;
+    left: 145px;
+}
+
+/* Api di atas lilin */
+.flame {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #FFD700; /* Warna api */
+    border-radius: 50%;
+    animation: flicker 0.5s infinite alternate;
+    top: -60px;
+    left: 145px;
+    opacity: 0;
+    animation-delay: 7s;
+}
+
+/* Tombol TIUP LILIN */
+.button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Warna tombol */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: none; /* Awalnya disembunyikan */
+}
+
+/* Animasi jatuh */
+@keyframes fall {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Animasi api */
+@keyframes flicker {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
